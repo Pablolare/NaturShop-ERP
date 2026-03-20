@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_proveedor_form" model="ir.ui.view">
+        <field name="name">naturshop.proveedor.form</field>
+        <field name="model">naturshop.proveedor</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="foto_proveedor" widget="image"/>
+                    <group>
+                        <field name="name"/>
+                        <field name="partner_id"/>
+                        <field name="categoria_id"/>
+                        <field name="certificacion_id"/>
+                        <field name="anios_experiencia"/>
+                        <field name="fecha_alta"/>
+                        <field name="valoracion"/>
+                        <field name="num_productos"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_proveedor_list" model="ir.ui.view">
+        <field name="name">naturshop.proveedor.list</field>
+        <field name="model">naturshop.proveedor</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="categoria_id"/>
+                <field name="certificacion_id"/>
+                <field name="valoracion"/>
+                <field name="anios_experiencia"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_proveedor_kanban" model="ir.ui.view">
+        <field name="name">naturshop.proveedor.kanban</field>
+        <field name="model">naturshop.proveedor</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="name"/>
+                <field name="categoria_id"/>
+                <field name="valoracion"/>
+                <templates>
+                    <t t-name="card">
+                        <field name="foto_proveedor" widget="image"/>
+                        <strong><field name="name"/></strong>
+                        <div>Categoría: <field name="categoria_id"/></div>
+                        <div>Valoración: <field name="valoracion"/></div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="action_proveedor" model="ir.actions.act_window">
+        <field name="name">Proveedores Naturales</field>
+        <field name="res_model">naturshop.proveedor</field>
+        <field name="view_mode">kanban,list,form</field>
+    </record>
+</odoo>

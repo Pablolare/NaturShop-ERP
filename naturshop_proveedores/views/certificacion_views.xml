@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_certificacion_form" model="ir.ui.view">
+        <field name="name">naturshop.certificacion.form</field>
+        <field name="model">naturshop.certificacion</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="codigo"/>
+                        <field name="descripcion"/>
+                        <field name="fecha_caducidad"/>
+                        <field name="activo"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_certificacion_tree" model="ir.ui.view">
+        <field name="name">naturshop.certificacion.tree</field>
+        <field name="model">naturshop.certificacion</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="codigo"/>
+                <field name="fecha_caducidad"/>
+                <field name="activo"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_certificacion" model="ir.actions.act_window">
+        <field name="name">Certificaciones</field>
+        <field name="res_model">naturshop.certificacion</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

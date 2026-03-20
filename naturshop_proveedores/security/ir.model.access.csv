@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_naturshop_categoria,naturshop.categoria,model_naturshop_categoria,,1,1,1,1
+access_naturshop_certificacion,naturshop.certificacion,model_naturshop_certificacion,,1,1,1,1
+access_naturshop_proveedor,naturshop.proveedor,model_naturshop_proveedor,,1,1,1,1

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem 
+        id="menu_naturshop_root" 
+        name="NaturShop Proveedores"
+        sequence="10"/>
+
+    <menuitem 
+        id="menu_naturshop_proveedores" 
+        name="Proveedores Naturales"
+        parent="menu_naturshop_root"
+        action="action_proveedor"
+        sequence="1"/>
+
+    <menuitem 
+        id="menu_naturshop_categorias" 
+        name="Categorías"
+        parent="menu_naturshop_root"
+        action="action_categoria"
+        sequence="2"/>
+
+    <menuitem 
+        id="menu_naturshop_certificaciones" 
+        name="Certificaciones"
+        parent="menu_naturshop_root"
+        action="action_certificacion"
+        sequence="3"/>
+</odoo>

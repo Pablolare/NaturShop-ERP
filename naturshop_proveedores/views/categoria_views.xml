@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_categoria_form" model="ir.ui.view">
+        <field name="name">naturshop.categoria.form</field>
+        <field name="model">naturshop.categoria</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="descripcion"/>
+                        <field name="activo"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_categoria_tree" model="ir.ui.view">
+        <field name="name">naturshop.categoria.tree</field>
+        <field name="model">naturshop.categoria</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="activo"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_categoria" model="ir.actions.act_window">
+        <field name="name">Categorías</field>
+        <field name="res_model">naturshop.categoria</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>
